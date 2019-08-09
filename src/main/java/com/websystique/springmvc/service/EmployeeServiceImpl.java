@@ -53,7 +53,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	public boolean isEmployeeSsnUnique(Integer id, String ssn) {
 		Employee employee = findEmployeeBySsn(ssn);
-		return ( employee == null || ((id != null) && (employee.getId() == id)));
+		return  employee == null || (id != null && employee.getId() == id);
 	}
 	
 }
